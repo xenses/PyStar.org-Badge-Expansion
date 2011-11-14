@@ -36,6 +36,8 @@ if __name__ == "__main__":
 ```
 
 2. Next, read the documentation on twitter's search API and find the boolean value you can set in the search query URL which will allow you to remove the follow piece of code from your client:
-    tweet['from_user'] + ':' +
+```
+tweet['from_user'] + ':' +
+```
 
 3. 
