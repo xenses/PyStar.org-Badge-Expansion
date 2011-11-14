@@ -14,7 +14,7 @@ The instructions are as follows:
 
 1. Complete the original badge at the pystar.org website, minus the 'Using a wrapper library' portion. That should give you a foundation that looks like this:
    
-    import urllib
+`    import urllib
     import json
     import sys
 
@@ -31,5 +31,5 @@ The instructions are as follows:
     if __name__ == "__main__":
         query = sys.argv[1]
         results = search_twitter(query)
-        print_tweets(results)
+        print_tweets(results)`
 
