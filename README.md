@@ -36,10 +36,12 @@ if __name__ == "__main__":
 ```
 
 2) Next, read the documentation on [twitter's search API][1] and find the boolean value you can set in the search query URL which will allow you to remove the following piece of code from your client:
+
 ```
 tweet['from_user'] + ':' +
 ```
 
-3) 
+3) Giving users options in how they query information is an important option to be provided by our application. To this end, we will add a function which will search twitter for a username and return tweets by a specific user. This [API][2] will get you started. 
 
 [1]: https://dev.twitter.com/docs/api/1/get/search "twitter's search API"
+[2]: https://dev.twitter.com/docs/api/1/get/statuses/user_timeline "API"
