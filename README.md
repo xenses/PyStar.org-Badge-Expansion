@@ -12,7 +12,7 @@ NB: I feel the use of a 'wrapper library' at this point in learning how a langua
 The instructions are as follows:
 --------------------------------
 
-1. Complete the original badge at the pystar.org website, minus the 'Using a wrapper library' portion. That should give you a foundation that looks like this:
+1) Complete the original badge at the pystar.org website, minus the 'Using a wrapper library' portion. That should give you a foundation that looks like this:
 
 ```
 import urllib
@@ -35,9 +35,9 @@ if __name__ == "__main__":
    print_tweets(results)
 ```
 
-2. Next, read the documentation on twitter's search API and find the boolean value you can set in the search query URL which will allow you to remove the follow piece of code from your client:
+2) Next, read the documentation on twitter's search API and find the boolean value you can set in the search query URL which will allow you to remove the follow piece of code from your client:
 ```
 tweet['from_user'] + ':' +
 ```
 
-3. 
+3) 
