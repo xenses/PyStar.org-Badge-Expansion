@@ -35,9 +35,11 @@ if __name__ == "__main__":
    print_tweets(results)
 ```
 
-2) Next, read the documentation on twitter's search API and find the boolean value you can set in the search query URL which will allow you to remove the following piece of code from your client:
+2) Next, read the documentation on [twitter's search API][1] and find the boolean value you can set in the search query URL which will allow you to remove the following piece of code from your client:
 ```
 tweet['from_user'] + ':' +
 ```
 
 3) 
+
+[1]: https://dev.twitter.com/docs/api/1/get/search "twitter's search API"
