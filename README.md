@@ -13,10 +13,9 @@ The instructions are as follows:
 --------------------------------
 
 1. Complete the original badge at the pystar.org website, minus the 'Using a wrapper library' portion. That should give you a foundation that looks like this:
-   
-   import urllib
-   import json
-   import sys
+    import urllib
+    import json
+    import sys
 
     def search_twitter(query='python'):
     	url = 'http://search.twitter.com/search.json?q=' + query
