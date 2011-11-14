@@ -14,22 +14,22 @@ The instructions are as follows:
 
 1. Complete the original badge at the pystar.org website, minus the 'Using a wrapper library' portion. That should give you a foundation that looks like this:
    
-`    import urllib
-    import json
-    import sys
+`import urllib
+import json
+import sys
 
-    def search_twitter(query='python'):
-        url = 'http://search.twitter.com/search.json?q=' + query
-        response = urllib.urlopen(url).read()
-        data = json.loads(response)
-        return data['results']
+def search_twitter(query='python'):
+    url = 'http://search.twitter.com/search.json?q=' + query
+    response = urllib.urlopen(url).read()
+    data = json.loads(response)
+    return data['results']
 
-    def print_tweets(tweets):
-        for tweet in tweets:
-            print tweet['from_user'] + ':' + tweet['text'] + '\n'
+def print_tweets(tweets):
+    for tweet in tweets:
+        print tweet['from_user'] + ':' + tweet['text'] + '\n'
 
-    if __name__ == "__main__":
-        query = sys.argv[1]
-        results = search_twitter(query)
-        print_tweets(results)`
+if __name__ == "__main__":
+    query = sys.argv[1]
+    results = search_twitter(query)
+    print_tweets(results)`
 
