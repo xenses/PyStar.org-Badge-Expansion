@@ -67,7 +67,7 @@ Our final task is to make our code fail gracefully when we enter a username that
 As it stands now, when there are no results for a search term the program simply ends quietly and our user doesn't know if the program failed, quit, found nothing, or just plain stinks. 
 When you enter a protected username the system is returning a lot of Very Bad(tm) sounding terms and a 404, which if you know your http codes, you know that means 'file not found'. There is also talk of an exception and IOErrors, OH MY! This is scary, let's not scare our users, let's give them some human readable feedback when they enter a non-public username.
 
-5) You'll need to know about Try/Catch, and what they are in general. These are blocks of code that *try* something and if it works, the function moves forward. However, if there is an exception, we want to *catch* it and do something which doesn't involve puking the exception to the end user. Let's start [here.][4]
+5) You'll need to know about Try/Catch, and what they are in general. These are blocks of code that **try** something and if it works, the function moves forward. However, if there is an exception, we want to **catch** it and do something which doesn't involve puking the exception to the end user. Let's start [here.][4]
 
 [1]: https://dev.twitter.com/docs/api/1/get/search "twitter's search API"
 [2]: https://dev.twitter.com/docs/api/1/get/statuses/user_timeline "API"
