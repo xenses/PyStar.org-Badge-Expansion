@@ -60,7 +60,16 @@ Once you have the argparse variables set (don't forget that when you're using a 
 
 ***COMMIT YOUR CODE ONCE THIS IS COMPLETE***
 
+At this point, you should have code that can take either a -u or a -s with a username or a search term and return data depending on what flag is used in the command line. To test our code, let's search for a user, let's use me; 'codegrl'. The system should return a rather lengthy '404' error message. Hrm, that's not pretty.  What if we search for a random string of characters? 'awodkdbabskdlafsdhdjfkjf' Huh, nothing.
+
+Our final task is to make our code fail gracefully when we enter a username that doesn't exist or is protected and have the system return thoughtful feedback to the user for such a scenario, or when there are no search results found for a search term. 
+
+As it stands now, when there are no results for a search term the program simply ends quietly and our user doesn't know if the program failed, quit, found nothing, or just plain stinks. 
+When you enter a protected username the system is returning a lot of Very Bad(tm) sounding terms and a 404, which if you know your http codes, you know that means 'file not found'. There is also talk of an exception and IOErrors, OH MY! This is scary, let's not scare our users, let's give them some human readable feedback when they enter a non-public username.
+
+5) You'll need to know about Try/Catch, and what they are in general. These are blocks of code that *try* something and if it works, the function moves forward. However, if there is an exception, we want to *catch* it and do something which doesn't involve puking the exception to the end user. Let's start [here.][4]
 
 [1]: https://dev.twitter.com/docs/api/1/get/search "twitter's search API"
 [2]: https://dev.twitter.com/docs/api/1/get/statuses/user_timeline "API"
 [3]: http://docs.python.org/dev/library/argparse.html "argparse"
+[4]: http://docs.python.org/tutorial/errors.html#handling-exceptions "here."
