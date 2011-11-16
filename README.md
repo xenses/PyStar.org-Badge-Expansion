@@ -66,7 +66,7 @@ if parse.query:
    do some things
 
 elif parse.username:
-     do these things instead.
+     do these things instead
 ```
 
 ***COMMIT YOUR CODE ONCE THIS IS COMPLETE***
