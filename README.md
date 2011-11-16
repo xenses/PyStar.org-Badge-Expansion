@@ -58,6 +58,17 @@ At this point, you may start seeing errors and you can't get your data to displa
 4)Next, we're going to use [argparse][3] to allow the user to enter a flag whether they are going to search for a username or for a search term. Depending on the flag, argparse is going to save the value in one of two variables. We will then take those variables and use them in our code. Let's call the variables for argparse 'username', and 'query'. The flags for each are simply '-u' or '-s'.
 Once you have the argparse variables set (don't forget that when you're using a library you must import the lib into your code) replace query = sys.argv[1] with your argparse variables. This means 'query' is no longer needed, so the first line of your if statement can be taken out completely and instead of passing 'query' to your functions, you'll pass the corresponding argparse variables.
 
+###But wait! There are two functions now! How do I know which one to call?
+Good question! We need to check and see which variable is set, the username or the query? We can use a simple 'if' statement to check; 
+
+```    
+if parse.query: 
+   do some things
+
+elif parse.username:
+     do these things instead.
+```
+
 ***COMMIT YOUR CODE ONCE THIS IS COMPLETE***
 
 At this point, you should have code that can take either a -u or a -s with a username or a search term and return data depending on what flag is used in the command line. To test our code, let's search for a user, let's use me; 'codegrl'. The system should return a rather lengthy '404' error message. Hrm, that's not pretty.  What if we search for a random string of characters? 'awodkdbabskdlafsdhdjfkjf' Huh, nothing.
@@ -68,6 +79,11 @@ As it stands now, when there are no results for a search term the program simply
 When you enter a protected username the system is returning a lot of Very Bad(tm) sounding terms and a 404, which if you know your http codes, you know that means 'file not found'. There is also talk of an exception and IOErrors, OH MY! This is scary, let's not scare our users, let's give them some human readable feedback when they enter a non-public username.
 
 5) You'll need to know about Try/Catch, and what they are in general. These are blocks of code that **try** something and if it works, the function moves forward. However, if there is an exception, we want to **catch** it and do something which doesn't involve puking the exception to the end user. Let's start [here.][4]
+This is pretty simple, we want to try and see if we get back a JSON object from the call to search_user, if we do, we want to call the print_tweets function and go about our business. However, if we get an IOError (remember seeing that above?) then we want to print what just happened, so that the user can read what's going on and know the state of the system. I used "That user's account is either private or does not exist. Please enter a valid account."
+
+So, what do we want to do if there are no search results for our term? We want to check if we get results back. If we don't, then we need to print something for the user to know that no results were found and to please retry.
+
+
 
 [1]: https://dev.twitter.com/docs/api/1/get/search "twitter's search API"
 [2]: https://dev.twitter.com/docs/api/1/get/statuses/user_timeline "API"
