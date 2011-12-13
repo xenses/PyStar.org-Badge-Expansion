@@ -1,6 +1,5 @@
 import urllib
 import json
-import sys
 import argparse
 
 parser = argparse.ArgumentParser()
@@ -9,13 +8,13 @@ parser.add_argument('-s', '--search', dest='query')
 args = parser.parse_args()
                     
 def search_twitter(query):
-    url = 'http://search.twitter.com/search.json?show_user=true&q=' + args.query
+    url = 'http://search.twitter.com/search.json?show_user=true&q=' + query
     response = urllib.urlopen(url).read()
     data = json.loads(response)
     return data['results']
                     
 def search_user(query):
-    url = 'http://api.twitter.com/1/statuses/user_timeline.json?include_entities=true&screen_name=' + args.username
+    url = 'http://api.twitter.com/1/statuses/user_timeline.json?include_entities=true&screen_name=' + query
     response = urllib.urlopen(url).read()
     data = json.loads(response)
     return data
